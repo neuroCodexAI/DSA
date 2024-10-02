@@ -4,7 +4,8 @@ public class OccuranceElement {
     public static int last = -1;
 
     public static void findOccurance(String str, int idx, char element) {
-        if (idx == str.length() - 1) {
+        if (idx == str.length()) {
+            System.out.println(first + 1 + "  " + (last + 1));
             return;
         }
 
@@ -19,9 +20,9 @@ public class OccuranceElement {
     }
 
     public static void main(String[] args) {
-        String str = "abbachshhbaacdal";
+        String str = "abbachshhbaacda";
         char element = 'a';
         findOccurance(str, 0, element);
-        System.out.println(first + 1 + "  " + (last + 1));
+
     }
 }

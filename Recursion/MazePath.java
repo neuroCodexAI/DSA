@@ -1,3 +1,4 @@
+// count total paths in a maze from (0,0) to (n,m)
 public class MazePath {
     public static int mazeCount(int i, int j, int n, int m) {
         if (i == n || j == m) {

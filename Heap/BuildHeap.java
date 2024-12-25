@@ -78,6 +78,7 @@ public class BuildHeap {
         while (!pq.isEmpty()) {
             System.out.println(pq.peek());
             pq.remove();
+
         }
     }
 }

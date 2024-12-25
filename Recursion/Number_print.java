@@ -65,4 +65,5 @@ public class Number_Print {
         System.out.println("------------Calculate factorial for Nth.----------------");
         System.out.println(calFact(n));
     }
+
 }

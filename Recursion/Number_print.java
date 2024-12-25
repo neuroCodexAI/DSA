@@ -1,6 +1,5 @@
 
 // Print number 1 to Nth no.
-import java.util.*;
 
 public class Number_Print {
     // print number N to 1 number

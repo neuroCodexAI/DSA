@@ -31,9 +31,37 @@ public class ImplementOfGraph {
             graph[3].add(new Edge(3, 1, 0));
             graph[3].add(new Edge(3, 2, -1));
         }
+
+        public static void bfs(ArrayList<Edge> graph[], int v, boolean[] vis, int start) {
+            Queue<Integer> que = new LinkedList<>();
+
+            que.add(start);
+
+            while (!que.isEmpty()) {
+                int curr = que.remove();
+                if (vis[curr] == false) {
+                    System.out.print(curr + " ");
+                    vis[curr] = true;
+
+                    for (int i = 0; i < graph[curr].size(); i++) {
+                        Edge e = graph[curr].get(i);
+                        que.add(e.dest);
+                    }
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
-        System.out.println("Raadha MahaDev");
+        ArrayList<Edge> graph[] = new ArrayList[4];
+        Edge.createGraph(graph);
+
+        boolean vis[] = new boolean[4];
+
+        for (int i = 0; i < 4; i++) {
+            if (vis[i] == false) {
+                Edge.bfs(graph, 4, vis, i);
+            }
+        }
     }
 }

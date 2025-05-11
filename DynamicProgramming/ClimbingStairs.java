@@ -47,5 +47,6 @@ public class ClimbingStairs {
         System.out.println(countWays(stair));
 
         System.out.println(climbStairs(stair));
+
     }
 }
